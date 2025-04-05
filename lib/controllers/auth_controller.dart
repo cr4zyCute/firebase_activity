@@ -37,7 +37,7 @@ class AuthController {
           .createUserWithEmailAndPassword(email: email, password: password);
 
       if (userCredential.user != null) {
-        print('🔥 New user UID: ${userCredential.user!.uid}');
+        print(' New user UID: ${userCredential.user!.uid}');
 
         final newUser = UserModel(
           id: userCredential.user!.uid, 
@@ -50,7 +50,7 @@ class AuthController {
       }
       return null;
     } catch (e) {
-      print('❌ Sign-up error: $e');
+      print(' Sign-up error: $e');
       return null;
     }
   }

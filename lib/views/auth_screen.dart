@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import '../controllers/auth_controller.dart';
 import '../models/user_model.dart';
+
 //import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -188,7 +190,9 @@ class _AuthScreenState extends State<AuthScreen> {
             return Card(
               child: ListTile(
                 title: Text(user.email),
-                subtitle: Text('UID: ${user.id}'),
+                subtitle: Text(
+                  'Date and Time: ${DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now())}',
+                ),
               ),
             );
           },
