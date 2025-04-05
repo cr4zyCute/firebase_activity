@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Firebase Flutter App',
-      home: AuthScreen(), // Call AuthScreen
+      home: AuthScreen(),
+      debugShowCheckedModeBanner: false,
+      // Call AuthScreen
     );
   }
 }
